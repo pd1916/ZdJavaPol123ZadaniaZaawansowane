@@ -2,7 +2,6 @@ package pl.sdacademy.java.advanced.exercises.day1.task8;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import pl.sdacademy.java.advanced.exercises.day1.task8.ParcelValidator;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -1,6 +1,6 @@
 package pl.sdacademy.java.advanced.exercises.day1.task9;
 
-public class Circle implements Movable, Resizable{
+public class Circle implements Movable, Resizable {
     private final Point2D center;
     private final Point2D point;
 
@@ -13,7 +13,7 @@ public class Circle implements Movable, Resizable{
         //pierw((center_x-point_x)^2 + (center_y-point_y)^2)
         return Math.sqrt(
                 Math.pow(center.getX() - point.getX(), 2) +
-                Math.pow(center.getY() - point.getY(), 2)
+                        Math.pow(center.getY() - point.getY(), 2)
         );
     }
 
