@@ -1,6 +1,6 @@
 package pl.sdacademy.java.advanced.exercises.day1.task9;
 
-public class Circle {
+public class Circle implements Movable{
     private final Point2D center;
     private final Point2D point;
 
@@ -23,5 +23,11 @@ public class Circle {
 
     public double getArea() {
         return Math.PI * Math.pow(getRadius(), 2);
+    }
+
+    @Override
+    public void move(MoveDirection moveDirection) {
+        center.move(moveDirection);
+        point.move(moveDirection);
     }
 }

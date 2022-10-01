@@ -1,8 +1,8 @@
 package pl.sdacademy.java.advanced.exercises.day1.task9;
 
-public class Point2D {
-    private final double x;
-    private final double y;
+public class Point2D implements Movable{
+    private double x;
+    private double y;
 
     public Point2D(double x, double y) {
         this.x = x;
@@ -15,5 +15,11 @@ public class Point2D {
 
     public double getY() {
         return y;
+    }
+
+    @Override
+    public void move(MoveDirection moveDirection) {
+        x += moveDirection.getX();
+        y += moveDirection.getY();
     }
 }

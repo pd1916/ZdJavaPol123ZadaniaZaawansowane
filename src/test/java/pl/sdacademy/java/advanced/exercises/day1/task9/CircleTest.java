@@ -17,6 +17,10 @@ class CircleTest {
         circle = new Circle(center, point);
     }
 
+    /*
+    Testy do zadania 9
+     */
+
     @Test
     void shouldReturnCorrectRadius() {
         //given
@@ -40,6 +44,42 @@ class CircleTest {
     @Test
     void shouldReturnCorrectArea() {
         //given
+        double expectedResult = 25.13;
+        //when
+        double result = circle.getArea();
+        //then
+        assertThat(result).isCloseTo(expectedResult, within(0.01D));
+    }
+
+    /*
+    Testy do zadania 10
+     */
+    @Test
+    void shouldReturnCorrectRadiusAfterMove() {
+        //given
+        circle.move(new MoveDirection(-1, -2));
+        double expectedResult = 2.83;
+        //when
+        double result = circle.getRadius();
+        //then
+        assertThat(result).isCloseTo(expectedResult, within(0.01D));
+    }
+
+    @Test
+    void shouldReturnCorrectPerimeterAfterMove() {
+        //given
+        circle.move(new MoveDirection(-1, -2));
+        double expectedResult = 17.78;
+        //when
+        double result = circle.getPerimeter();
+        //then
+        assertThat(result).isCloseTo(expectedResult, within(0.01D));
+    }
+
+    @Test
+    void shouldReturnCorrectAreaAfterMove() {
+        //given
+        circle.move(new MoveDirection(-1, -2));
         double expectedResult = 25.13;
         //when
         double result = circle.getArea();
