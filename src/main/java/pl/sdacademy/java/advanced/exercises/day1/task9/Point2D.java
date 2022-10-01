@@ -17,6 +17,14 @@ public class Point2D implements Movable{
         return y;
     }
 
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
     @Override
     public void move(MoveDirection moveDirection) {
         x += moveDirection.getX();

@@ -1,6 +1,6 @@
 package pl.sdacademy.java.advanced.exercises.day1.task9;
 
-public class Circle implements Movable{
+public class Circle implements Movable, Resizable{
     private final Point2D center;
     private final Point2D point;
 
@@ -29,5 +29,13 @@ public class Circle implements Movable{
     public void move(MoveDirection moveDirection) {
         center.move(moveDirection);
         point.move(moveDirection);
+    }
+
+    @Override
+    public void resize(double resizeFactor) {
+        double newX = ((point.getX() - center.getX()) * resizeFactor); // ? + center.getX
+        double newY = ((point.getY() - center.getY()) * resizeFactor); // ? + center.getY
+        point.setX(newX);
+        point.setY(newY);
     }
 }
