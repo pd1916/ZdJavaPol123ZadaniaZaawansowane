@@ -92,4 +92,68 @@ class CarServiceTest {
         //then
         assertThat(result.get()).isEqualTo(gls_1);
     }
+
+    @Test
+    void shouldReturnTheMostExpensiveCar() {
+        //when
+        Car result = carService.getMostExpensiveCar().get();
+        //then
+        assertThat(result).isEqualTo(gls_1);
+    }
+
+    @Test
+    void shouldReturnSortedListAscending() {
+        //when
+        List<Car> result = carService.getCarsSortedByName(true);
+        //then
+        assertThat(result).containsExactly(gls_1, gls_2, x500, xc60_1, xc60_2, xc90_1, xc90_2);
+    }
+
+    @Test
+    void shouldReturnSortedListDescending() {
+        //when
+        List<Car> result = carService.getCarsSortedByName(false);
+        //then
+        assertThat(result).containsExactly(xc90_1, xc90_2, xc60_1, xc60_2, x500, gls_1, gls_2);
+    }
+
+    @Test
+    void shouldReturnListOfCarsWhichManufacturersFounded_LessThan() {
+        //when
+        List<Car> result = carService.getCarsFoundedInAndProducedBy(1900, Operation.LESS_THAN);
+        //then
+        assertThat(result).containsExactlyInAnyOrder(x500, gls_1, gls_2);
+    }
+
+    @Test
+    void shouldReturnCarsProducedBefore1999() {
+        //when
+        List<Car> result = carService.getCarsProducedBefore1999();
+        //then
+        assertThat(result).containsExactlyInAnyOrder(xc60_2);
+    }
+
+    @Test
+    void shouldReturnCheapestCar() {
+        //when
+        Car result = carService.getCheapestCar().get();
+        //then
+        assertThat(result).isEqualTo(xc60_2);
+    }
+
+    @Test
+    void shouldReturnCarsHavingAtLeast2Manufacturers() {
+        //when
+        List<Car> result = carService.getCarsHavingAtLeast2Manufacturers();
+        //then
+        assertThat(result).containsExactlyInAnyOrder(gls_1, gls_2);
+    }
+
+    @Test
+    void shouldReturnCarsProducedBy() {
+        //when
+        List<Car> result = carService.getCarsProducedBy(volvo);
+        //then
+        assertThat(result).containsExactlyInAnyOrder(xc90_1, xc90_2, xc60_1, xc60_2);
+    }
 }
