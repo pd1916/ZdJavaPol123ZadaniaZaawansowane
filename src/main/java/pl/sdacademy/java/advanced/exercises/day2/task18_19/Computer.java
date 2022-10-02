@@ -3,10 +3,10 @@ package pl.sdacademy.java.advanced.exercises.day2.task18_19;
 import java.util.Objects;
 
 public class Computer {
-    private String cpu;
-    private int ram;
-    private String manufacturer;
-    private String model;
+    private final String cpu;
+    private final int ram;
+    private final String manufacturer;
+    private final String model;
 
     public Computer(String cpu, int ram, String companyName, String model) {
         this.cpu = cpu;
@@ -17,8 +17,8 @@ public class Computer {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass()) return false;
         Computer computer = (Computer) o;
         return
                 ram == computer.ram &&

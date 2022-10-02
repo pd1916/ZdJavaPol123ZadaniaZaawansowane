@@ -1,6 +1,6 @@
 package pl.sdacademy.java.advanced.exercises.day2.task20_21_22;
 
-public class Cube extends Shape3D implements Fillable{
+public class Cube extends Shape3D implements Fillable {
     private final int a;
 
     public Cube(int a) {

@@ -10,7 +10,7 @@ public enum ConversionTypeWithFunction {
     KILOMETERS_TO_MILES(v -> v * 0.62f),
     MILES_TO_KILOMETERS(v -> v / 0.62f);
 
-    private final Function<Float,Float> conversionFunction;
+    private final Function<Float, Float> conversionFunction;
 
     ConversionTypeWithFunction(Function<Float, Float> conversionFunction) {
         this.conversionFunction = conversionFunction;

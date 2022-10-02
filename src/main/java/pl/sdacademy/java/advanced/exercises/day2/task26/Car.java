@@ -1,9 +1,9 @@
 package pl.sdacademy.java.advanced.exercises.day2.task26;
 
 public class Car {
-    private String name;
-    private String description;
-    private CarType carType;
+    private final String name;
+    private final String description;
+    private final CarType carType;
 
     public Car(String name, String description, CarType carType) {
         this.name = name;

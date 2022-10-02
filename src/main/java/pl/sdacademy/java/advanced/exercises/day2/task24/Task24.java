@@ -27,7 +27,7 @@ public class Task24 {
         basket.removeFromBasket(); //usuwam 10ty element
         try {
             basket.removeFromBasket(); //usuwam 11ty element, rzucam exception
-        } catch (BasketEmptyException ex) {
+        } catch(BasketEmptyException ex) {
             System.out.println("Komunikat z sekcji catch");
         } finally {
             System.out.println("Komunikat z sekcji finally");

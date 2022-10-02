@@ -37,7 +37,7 @@ public class Task14 {
     private static List<Integer> generateRandomList() {
         Random r = new Random();
         List<Integer> randomList = new ArrayList<>();
-        for (int i = 0; i < BOUND; i++) {
+        for(int i = 0; i < BOUND; i++) {
             randomList.add(r.nextInt(BOUND));
         }
         return randomList.stream().sorted().collect(Collectors.toList());
@@ -74,7 +74,7 @@ public class Task14 {
 
     private static void addOrGenerateUniqueValue(List<Integer> uniqueValues, Integer value) {
         Random randomGenerator = new Random(BOUND);
-        while (uniqueValues.contains(value)) {
+        while(uniqueValues.contains(value)) {
             value = randomGenerator.nextInt();
         }
         uniqueValues.add(value);

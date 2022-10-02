@@ -7,7 +7,7 @@ public class Basket {
         currentNumberOfItems = 0;
     }
 
-    public void addToBasket() throws BasketFullExceptionAsChecked{
+    public void addToBasket() throws BasketFullExceptionAsChecked {
         if(currentNumberOfItems == 10) {
             throw new BasketFullExceptionAsChecked("Too many items in the basket!");
         }

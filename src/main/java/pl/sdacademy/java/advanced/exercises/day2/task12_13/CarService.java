@@ -77,7 +77,7 @@ public class CarService {
     }
 
     public List<Car> getCarsFoundedInAndProducedBy(int foundedYear, Operation operation) {
-        switch (operation) {
+        switch(operation) {
             case GREATER_THAN:
                 return cars.stream()
                         .filter(car -> car.getManufacturers().stream()
