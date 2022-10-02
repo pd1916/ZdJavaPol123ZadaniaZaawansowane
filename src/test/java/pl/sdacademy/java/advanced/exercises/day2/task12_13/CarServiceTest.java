@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -73,5 +74,22 @@ class CarServiceTest {
         //then
         assertThat(result.size()).isEqualTo(2);
         assertThat(result).containsExactlyInAnyOrder(gls_1, xc90_1);
+    }
+
+    @Test
+    void shouldReturnCarsWithProductionYearBefore1999() {
+        //when
+        List<Car> result = carService.getCarsProducedBefore1999();
+        //then
+        assertThat(result).hasSize(1);
+        assertThat(result).contains(xc60_2);
+    }
+
+    @Test
+    void shouldReturnMostExpensiveCar() {
+        //when
+        Optional<Car> result = carService.getMostExpensiveCar();
+        //then
+        assertThat(result.get()).isEqualTo(gls_1);
     }
 }
