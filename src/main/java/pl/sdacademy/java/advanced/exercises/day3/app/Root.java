@@ -3,11 +3,11 @@ package pl.sdacademy.java.advanced.exercises.day3.app;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Root{
+public class Root {
     private String table;
     private String no;
     private String effectiveDate;
-    private  ArrayList<Rate> rates;
+    private ArrayList<Rate> rates;
 
     public Root() {
     }

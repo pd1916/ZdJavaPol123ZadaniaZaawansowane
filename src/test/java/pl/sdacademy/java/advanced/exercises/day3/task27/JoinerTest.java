@@ -2,7 +2,7 @@ package pl.sdacademy.java.advanced.exercises.day3.task27;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class JoinerTest {
 

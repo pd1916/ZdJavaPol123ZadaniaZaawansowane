@@ -2,7 +2,7 @@ package pl.sdacademy.java.advanced.exercises.day3.app;
 
 import java.util.Objects;
 
-public class Rate{
+public class Rate {
     private String currency;
     private String code;
     private double mid;

@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 public class ImageFinder {
 
     public static List<String> find(Path director) {
-        try (Stream<Path> walk = Files.walk(director)) {
+        try(Stream<Path> walk = Files.walk(director)) {
             return walk
                     .map(Path::toFile)
                     .map(File::getName)

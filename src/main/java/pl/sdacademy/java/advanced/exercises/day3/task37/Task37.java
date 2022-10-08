@@ -2,9 +2,6 @@ package pl.sdacademy.java.advanced.exercises.day3.task37;
 
 import pl.sdacademy.java.advanced.exercises.day3.task36.ThreadPlaygroundRunnable;
 
-import java.time.Duration;
-import java.time.LocalDateTime;
-import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

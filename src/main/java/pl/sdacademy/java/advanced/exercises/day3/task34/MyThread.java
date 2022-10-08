@@ -1,6 +1,6 @@
 package pl.sdacademy.java.advanced.exercises.day3.task34;
 
-public class MyThread extends Thread{
+public class MyThread extends Thread {
 
     public void run() {
         System.out.println("Początek wątku");
