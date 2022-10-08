@@ -7,17 +7,11 @@ public class SkipArrayList<T> extends ArrayList<T> {
     public SkipArrayList() {
     }
 
-    public List<T> gerEveryNthElement(int startIndex, int skip) {
-        // todo
-        return null; //zwracamy nową listę z wybranymi elementami
+    public List<T> getEveryNthElement(int startIndex, int skip) {
+        List<T> everyNthElements = new ArrayList<>();
+        for(int i = startIndex; i < size(); i += skip+1) {
+            everyNthElements.add(get(i));
+        }
+        return everyNthElements; //zwracamy nową listę z wybranymi elementami
     }
 }
-
-/*
-SkipArrayList<String> skipArrayList = new SkipArrayList<>(List.of("a", "b", "c", "d", "e", "f", "g"));
-
-SkipArrayList<String> skipArrayList = new SkipArrayList<>();
-skipArrayList.addAll(List.of("a", "b", "c", "d", "e", "f", "g"));
-
-SkipArrayList<String> = skipArrayList.gerEveryNthElement(2, 3);
- */
